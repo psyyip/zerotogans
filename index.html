@@ -4,7 +4,7 @@
 In this course project, I pick a COVID-19 Detection X-Ray Dataset and apply the concepts I learned in the course to train deep learning classification models end-to-end with PyTorch, experimenting with different hyperparameters & metrics. A project report is also created in the form a blog post to summarizing my results & findings.
 
 <h2>Purpose of the Project</h2>
-Purpose of this project is to read the lung X-Ray images to tell if the lungs belong to COVID-19, bacterial, viral pneumonia patients or normal persons.
+Purpose of this project is to read the lung X-Ray images to classify the X-ray images to lungs belong to COVID-19, bacterial, viral pneumonia patients or normal persons.
 
 <h2>Dataset</h2>
 Following the new Coronavirus(COVID-19) outbreak, data scientists are looking for patterns and methods to speed up testing and diagnostics. This dataset consists of X-ray(PA-CXR) images of COVID-19,bacterial and viral pneumonia patients and Normal people.
@@ -15,5 +15,14 @@ TrainData - 2083 images of shape (300,400,1) of Normal(901),COVID-19(60+60),Bact
 ValData - 988 images of variable shapes of Normal(450),COVID-19(9),ViralPneumonia(205),Bacterial Pneumonia(324)
 Non Augmented Data - Same Data as TrainData but not augmented
 
+As the Non Augmented Data is same as TrainData but not augmented, I decided not to use it for training or evaluation.
+
 <h2>Acknowledgements</h2>
 Github user ieee8023 for COVID-19 X-Rays Paul Mooney for Pneumonia Dataset
+
+<h2>Evaluation</h2?
+I use accuracy to assessment the performance of the model. At the same time, the training and validation losses (from cross entropy) can tell us if there losses are big and if there is overfitting.
+
+<h2>Architecture</h2>
+Initially, I used the simple CNN model we learnt in lecture 4. But I found that the results do not look good (accuracy) and unstable. Therefore, I use the ResNet9 and the new skills I learnt in lecture 5.
+
