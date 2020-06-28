@@ -41,12 +41,14 @@ I tried different combination of the following so as to improve the accuracy and
 
 I did not apply Channel-wise data normalization because my images are all greyscale.
 
+I found that the batch size cannot be higher than 80 and the number of channels cannot be higher than 128, otherwise, my notebook will be out of memory.
+
 No matter how much I tried, the best accuracy is still within 65% to 70%. I think it is probably due to the small training dataset I got.
 
 <h2>Outputs</h2>
 I print out the training & validation loss, accuracy and learning rates to illustration the results. <br><br>
 
-By the end of my notebook, I also save the weights of my model such that next time, I can use the model without training it again.
+By the end of my notebook, I also save the weights of my model such that next time, I can upload the saved model weights and re-use the model without training it again.
   
 The current accuracy is not ideal. Next time, I will use bigger dataset and see if the accuracy will further improve.
 
