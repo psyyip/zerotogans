@@ -9,11 +9,11 @@ Purpose of this project is to read the lung X-Ray images to classify the X-ray i
 <h2>Dataset</h2>
 Following the new Coronavirus(COVID-19) outbreak, data scientists are looking for patterns and methods to speed up testing and diagnostics. This dataset consists of X-ray(PA-CXR) images of COVID-19,bacterial and viral pneumonia patients and Normal people.
 
-The dataset has three directories- TrainData,ValData and NonAugmentedTrain.
+The dataset has three directories- TrainData,ValData and NonAugmentedTrain.<br>
 
-<b>TrainData</b> - 2,083 images of shape (300,400,1) of Normal(901),COVID-19(60+60),Bacterial Pneumonia(650), Viral Pneumonia(412)
-<b>ValDat</b>a - 988 images of variable shapes of Normal(450),COVID-19(9),ViralPneumonia(205),Bacterial Pneumonia(324)
-<b>Non Augmented Data</b> - Same Data (2,002) as TrainData but not augmented
+<b>TrainData</b> - 2,083 images of shape (300,400,1) of Normal(901),COVID-19(60+60),Bacterial Pneumonia(650), Viral Pneumonia(412)<br>
+<b>ValDat</b>a - 988 images of variable shapes of Normal(450),COVID-19(9),ViralPneumonia(205),Bacterial Pneumonia(324)<br>
+<b>Non Augmented Data</b> - Same Data (2,002) as TrainData but not augmented<br>
 
 As the Non Augmented Data is same as TrainData but not augmented, I decided not to use it for training or evaluation.
 
@@ -21,8 +21,22 @@ As the Non Augmented Data is same as TrainData but not augmented, I decided not 
 Github user ieee8023 for COVID-19 X-Rays Paul Mooney for Pneumonia Dataset
 
 <h2>Evaluation</h2>
-I use accuracy to assessment the performance of the model. At the same time, the training and validation losses (from cross entropy) can tell us if there losses are big and if there is overfitting.
+I use accuracy to assessment the performance of the model. At the same time, the training and validation losses (from cross entropy) can tell us if there losses are big and if there is any overfitting.
 
 <h2>Architecture</h2>
 Initially, I used the simple CNN model we learnt in lecture 4. But I found that the results do not look good (accuracy) and unstable. Therefore, I use the ResNet9 and the new skills I learnt in lecture 5.
+
+I tried different combination of the following so as to improve the accuracy and reduce losses:<br>
+<li>Adding more Conv2d layers
+<li>Adding Relu layers
+<li>Increasing more channels
+<li>Increasing batch size
+<li>Randomized data augmentations
+<li>Learning rate scheduling
+<li>Weight decaly
+<li>Gradient clipping
+
+No matter how much I tried, the best accuracy is still within 65% to 70%. I think it is probably due to the small training dataset I got.
+  
+
 
